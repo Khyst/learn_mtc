@@ -1,0 +1,23 @@
+mtc_node:
+  ros__parameters:
+    arm_group: "fr3_arm"
+    hand_group: "fr3_hand"
+    hand_frame: "fr3_hand"
+    world_frame: "world"
+    object_name: "object"
+    
+    # Pick and place Bumble Bee Figure
+    # ------------------------------
+    # Object starting position
+    obj_x: 0.55
+    obj_y: -0.23
+    obj_z: 0.22
+    
+    # Object drop position
+    place_x: 0.55
+    place_y: 0.3
+    place_z: 0.35
+
+    gripper_left_joint: 0.01
+    gripper_right_joint: 0.01
+    # ------------------------------
