@@ -37,10 +37,16 @@ target_compile_features(learn_mtc PUBLIC c_std_99 cxx_std_17)  # Require C99 and
 install(TARGETS learn_mtc
   DESTINATION lib/${PROJECT_NAME})
 
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME})
+
 install(DIRECTORY launch 
   DESTINATION share/${PROJECT_NAME})
 
 install(DIRECTORY worlds
+  DESTINATION share/${PROJECT_NAME})
+
+install(DIRECTORY scripts
   DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)

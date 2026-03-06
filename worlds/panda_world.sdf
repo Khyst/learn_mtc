@@ -164,21 +164,21 @@
       <uri>
       https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure
       </uri>
-      <pose>1 0 1.025 0 0 0</pose>
+      <pose>0.5 0 1.025 0 0 0</pose>
     </include>
 
     <include>
       <uri>
       https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/Avengers_Thor_PLlrpYniaeB
       </uri>
-      <pose>1 0.5 1.025 0 0 0</pose>
+      <pose>0.5 0.25 1.025 0 0 0</pose>
     </include>
 
     <include>
       <uri>
         https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/My_Little_Pony_Princess_Celestia
       </uri>
-      <pose>1 -0.5 1.025 0 0 1.5708</pose>
+      <pose>0.5 -0.25 1.025 0 0 1.5708</pose>
     </include>
 
   </world>
