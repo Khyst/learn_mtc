@@ -1,18 +1,23 @@
 <?xml version="1.0" ?>
 <sdf version="1.7">
+
   <world name="panda_world">
+
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
+
     <plugin
       filename="ignition-gazebo-physics-system"
       name="ignition::gazebo::systems::Physics">
     </plugin>
+
     <plugin
       filename="ignition-gazebo-user-commands-system"
       name="ignition::gazebo::systems::UserCommands">
     </plugin>
+
     <plugin
       filename="ignition-gazebo-scene-broadcaster-system"
       name="ignition::gazebo::systems::SceneBroadcaster">
@@ -81,19 +86,6 @@
         <iterations>true</iterations>
       </plugin>
 
-      <!-- <plugin filename="JointPositionController" name="JointPositionController">
-        <ignition-gui>
-          <property type="double" key="height">600</property>
-          <property type="double" key="width">400</property>
-
-          <property type="string" key="state">floating</property>
-          <anchors target="3D View">
-            <line own="right" target="right"/>
-            <line own="top" target="top"/>
-          </anchors>
-        </ignition-gui>
-        <model_name>panda</model_name>
-      </plugin> -->
     </gui> 
 
     <light type="directional" name="sun">
@@ -137,13 +129,6 @@
       </link>
     </model>
 
-    <!-- <include>
-      <uri>
-        https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Panda with Ignition position controller model
-      </uri>
-      <pose>0.2 0 1.025 0 0 0</pose>
-    </include> -->
-
     <include>
       <uri>
         https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Table
@@ -164,22 +149,38 @@
       <uri>
       https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure
       </uri>
-      <pose>0.5 0 1.025 0 0 0</pose>
+      <pose>0.75 -0.25 1.025 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/spotlightss/models/ACE_Coffee_Mug_Kristen_16_oz_cup
+      </uri>
+      <pose>0.75 0 1.025 0 0 0</pose>
+    </include>
+
+
+    <!-- <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/GoogleResearch/models/Target_Basket_Medium
+      </uri>
+      <pose>0.75 0.28 1.025 0 0 0</pose>
+    </include> -->
+
+    <!-- <include>
+      <uri>
+        https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/My_Little_Pony_Princess_Celestia
+      </uri>
+      <pose>0.75 -0.25 1.025 0 0 1.5708</pose>
+    </include> -->
 
     <include>
       <uri>
       https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/Avengers_Thor_PLlrpYniaeB
       </uri>
-      <pose>0.5 0.25 1.025 0 0 0</pose>
+      <pose>0.75 0.25 1.025 0 0 0</pose>
     </include>
 
-    <include>
-      <uri>
-        https://fuel.ignitionrobotics.org/1.0/GoogleResearch/models/My_Little_Pony_Princess_Celestia
-      </uri>
-      <pose>0.5 -0.25 1.025 0 0 1.5708</pose>
-    </include>
 
   </world>
 </sdf>

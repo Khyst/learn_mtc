@@ -113,6 +113,7 @@ void MTCTaskNode::setupPlanningScene() {
   object.primitives.resize(1);
   object.primitives[0].type = shape_msgs::msg::SolidPrimitive::CYLINDER;
   object.primitives[0].dimensions = { 0.1, 0.02 }; 
+  
   geometry_msgs::msg::Pose obj_pose;
   obj_pose.position.x = obj_x_;
   obj_pose.position.y = obj_y_;
