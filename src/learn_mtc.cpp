@@ -98,7 +98,9 @@ rclcpp::node_interfaces::NodeBaseInterface::SharedPtr MTCTaskNode::getNodeBaseIn
 }
 
 void MTCTaskNode::setupPlanningScene() {
+  
   auto client = node_->create_client<moveit_msgs::srv::ApplyPlanningScene>("/apply_planning_scene");
+
   while (!client->wait_for_service(std::chrono::seconds(2))) {
     if (!rclcpp::ok()) return;
     RCLCPP_INFO(LOGGER, "Waiting for /apply_planning_scene service...");
@@ -107,6 +109,7 @@ void MTCTaskNode::setupPlanningScene() {
   moveit::planning_interface::PlanningSceneInterface psi;
 
   // 대상 물체만 추가
+  // -------------------------------------------------------------------------
   moveit_msgs::msg::CollisionObject object;
   object.id = object_name_;
   object.header.frame_id = world_frame_;
@@ -122,12 +125,14 @@ void MTCTaskNode::setupPlanningScene() {
   object.primitive_poses.push_back(obj_pose);
   object.operation = moveit_msgs::msg::CollisionObject::ADD;
   psi.applyCollisionObject(object);
+  // -------------------------------------------------------------------------
 
   RCLCPP_INFO(LOGGER, "Planning scene setup complete. (Object only)");
 }
 
 mtc::Task MTCTaskNode::createTask() {
   mtc::Task task;
+
   task.stages()->setName("panda pick & place (No Plate)");
   task.loadRobotModel(node_);
 
